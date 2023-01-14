@@ -34,11 +34,11 @@ class ListAdapterRV : ListAdapter<User,ListAdapterRV.ViewHolder>(ItemDiff()) {
 
 class ItemDiff() : DiffUtil.ItemCallback<User>(){
     override fun areItemsTheSame(oldItem: User, newItem: User): Boolean {
-        TODO("Not yet implemented")
+        return oldItem.id == newItem.id
     }
 
     override fun areContentsTheSame(oldItem: User, newItem: User): Boolean {
-        TODO("Not yet implemented")
+        return oldItem == newItem
     }
 
 }
